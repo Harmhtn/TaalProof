@@ -1,15 +1,7 @@
 <?php
 
-require "src/Classes/QueryMyDatabase.php";
-
-$query = new QueryMyDatabase();
-
-//$query->getAllProduct();
+require 'src/bootstrap.php';
 
 
-require "views/head.php";
-
-require "views/default/index.view.php";
-
-//require "views/footer.php";
-
+require Router::load('routes.php')
+    ->direct(Request::uri());
