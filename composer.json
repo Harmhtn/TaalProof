@@ -4,7 +4,8 @@
   "minimum-stability": "stable",
   "license": "proprietary",
   "require": {
-    "fpdf/fpdf": "^1.81"
+    "fpdf/fpdf": "^1.81",
+    "ext-pdo": "*"
   },
   "authors": [
     {

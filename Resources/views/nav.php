@@ -1,15 +1,23 @@
-<div class="d-flex flex-md-row align-items-center bg-white">
-    <a class="my-0 mr-md-auto" href="index.php"><img style="max-height: 120px;" class="" src="Resources/Images/logo-header.png" alt=""></a>
-    <nav class="">
-        <a class="p-2 text-dark" href="#">Boomgaard</a>
-        <a class="p-2 text-dark" href="#">In de fles</a>
-        <a class="p-2 text-dark" href="#">Hmmm</a>
-        <a class="p-2 text-dark" href="#">Sappen</a>
-        <a class="p-2 text-dark" href="#">Horeca</a>
-        <a class="p-2 text-dark" href="#">Nieuws</a>
-        <a  class="p-2 text-dark" href="#">Contact</a>
-        <a  class="p-2 text-dark" href="/logout">Logout</a>
-    </nav>
-    <a class="fas fa-shopping-cart"></a>
-</div>
-<hr>
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm  bg-white">
+    <a class="navbar-brand" href="/">
+        <img class="img-responsive" src="src/Resources/public/images/logotaalproof.fw.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Taalproof</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/video">Video's</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/account">Account</a>
+            </li>
+        </ul>
+    </div>
+</nav>

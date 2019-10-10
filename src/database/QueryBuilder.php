@@ -22,47 +22,10 @@ class QueryBuilder
 
     }
 
-    public function createProduct(){
-        $name = $_POST['name'];
-        $description = $_POST['description'];
-        $nutrition = $_POST['nutrition'];
-        $price = $_POST['price'];
-        $image = $_SESSION['picture'];
-        $juice_type = $_POST['juice_type'];
-        $nutritionNew = nl2br(  $nutrition, true);
-
-
-        if(!empty($name) || !empty($description) || !empty($nutritionNew) || !empty($price) || !empty($image) || !empty($juice_type)) {
-            $sql = ("INSERT INTO product 
-            (product_name, product_description, nutrition_value, product_price, product_image, juice_type_juice_type_id)
-            VALUES ('$name', '$description', '$nutritionNew', '$price', '$image', '$juice_type')
-            ");
-
-            $sel = $this->conn->prepare($sql);
-
-            $sel->execute();
-            return;
-        }
-        else{
-            $_POST['upload'] = 'empty';
-            return;
-        }
-    }
-
-
-    public function removeItem($id)
-    {
-        $sql = ("DELETE FROM product WHERE product_id = '$id'");
-
-        $sel = $this->conn->prepare($sql);
-
-        $sel->execute();
-
-    }
-    public function login($email, $password)
+    public function login($login_name, $password)
     {
 
-        $sql = $this->pdo->prepare("SELECT * FROM customers WHERE customer_email = '$email' AND customer_password = '$password'");
+        $sql = $this->pdo->prepare("SELECT * FROM users WHERE login_name = '$login_name' AND user_password = '$password'");
         $sql->execute();
 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -71,7 +34,7 @@ class QueryBuilder
 
     }
 
-    public function register($username, $mail, $pass , $zipcode, $phone, $address, $city_id, $payment_method, $customer_type, $last_updated_date )
+    public function register($username, $mail, $pass, $zipcode, $phone, $address, $city_id, $payment_method, $customer_type, $last_updated_date)
     {
         //insert de user in de db vergeet niet alle columns!!!!!
         //pass hash
@@ -98,6 +61,36 @@ class QueryBuilder
 
     }
 
+    public function selectUserById($id)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM users WHERE user_id = $id");
+        $sql->execute();
+
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
+
+    }
+
+    public function updateUser($user_name, $login_name, $email, $id)
+    {
+        try {
+
+            $sql = $this->pdo->prepare("UPDATE users SET user_name = :user_name, login_name = :login_name, user_email = :email  WHERE user_id = :id");
+
+            $sql->bindParam('user_name', $user_name);
+            $sql->bindParam('login_name', $login_name);
+            $sql->bindParam('email', $email);
+            $sql->bindParam('id', $id);
+
+            $sql->execute();
+
+            $_SESSION['updated'] = true;
+        }catch (PDOException $e){
+            $_SESSION['updated'] = false;
+        }
+    }
+
     public function getCities()
     {
         //select all cities
@@ -111,4 +104,27 @@ class QueryBuilder
 
         return $result;
     }
+
+    public function selectVideoById($table, $video_ids)
+    {
+
+        $sql = $this->pdo->prepare("SELECT * FROM videos WHERE video_id in ($video_ids)");
+        $sql->execute();
+
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
+    }
+
+    public function selectAllIdWhereId($category_id)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM multiple_categories WHERE video_category_category_id = '$category_id'");
+        $sql->execute();
+
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
+    }
+
+
 }

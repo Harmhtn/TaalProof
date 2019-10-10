@@ -1,0 +1,16 @@
+.jumbotron {
+    background-image: url("/src/Resources/public/images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.hoeverclass:hover .edit {
+    display: block;
+}
+
+.edit{
+    display: none;
+}
