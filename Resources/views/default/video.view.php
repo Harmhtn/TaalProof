@@ -33,7 +33,7 @@
                              src="http://img.youtube.com/vi/<?= $video['video_code'] ?>/mqdefault.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-text"><?= $video['video_name'] ?></h5>
-                            <a href="#" class="btn btn-primary">Kijk video!</a>
+                            <a href="/watch/video?id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
                         </div>
                     </div>
                 </div>

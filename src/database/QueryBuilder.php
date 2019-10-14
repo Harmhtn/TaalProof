@@ -116,6 +116,13 @@ class QueryBuilder
 
         return $results;
     }
+    public function test()
+    {
+        echo"<pre>";
+        print_r("yo");
+        exit;
+    }
+
 
 
 }

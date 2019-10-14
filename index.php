@@ -20,5 +20,8 @@ if(isset($_SESSION["logged_in"]) != true) {
     }
 
 
+}else{
+    require Router::load('routes.php')
+        ->direct(Request::uri());
 }
 
