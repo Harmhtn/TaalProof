@@ -3,6 +3,8 @@
 require 'Resources/views/head.php';
 
 
+
+
 $user_info = $app['database']->selectUserById($_SESSION["user_id"]);
 
 if(isset($_GET['change'])) {

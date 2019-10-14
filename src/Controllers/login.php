@@ -1,6 +1,9 @@
 <?php
-
 $app['database'];
+
+if($_SERVER['REQUEST_URI'] == '/logout'){
+    session_destroy();
+}
 
 //load head and navbar
 require 'Resources/views/head.php';
