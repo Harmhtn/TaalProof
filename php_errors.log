@@ -1,46 +1,16 @@
-[03-Oct-2019 10:41:57 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:41:57 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:00 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:01 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:43 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:43 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Warning:  require(../head.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:43:44 UTC] PHP Fatal error:  require(): Failed opening required '../head.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 2
-[03-Oct-2019 10:44:11 UTC] PHP Warning:  require(../nav.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\head.php on line 6
-[03-Oct-2019 10:44:11 UTC] PHP Fatal error:  require(): Failed opening required '../nav.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\head.php on line 6
-[03-Oct-2019 10:44:24 UTC] PHP Warning:  require(../footer.php): failed to open stream: No such file or directory in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 11
-[03-Oct-2019 10:44:24 UTC] PHP Fatal error:  require(): Failed opening required '../footer.php' (include_path='.;c:\php\includes') in C:\inetpub\wwwroot\PHP\taalproof_2.0\views\default\index.view.php on line 11
+[11-Oct-2019 11:31:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ti6l6GEhzS.city' doesn't exist in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php:101
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php(101): PDOStatement->execute()
+#1 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\register.php(7): QueryBuilder->getCities()
+#2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(21): require('C:\\inetpub\\wwwr...')
+#3 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 101
+[11-Oct-2019 11:31:42 UTC] PHP Notice:  Undefined variable: cities in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\register.view.php on line 35
+[11-Oct-2019 11:31:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\register.view.php on line 35
+[11-Oct-2019 11:45:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1364 Field 'roles_role_id' doesn't have a default value in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php:51
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php(51): PDOStatement->execute()
+#1 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\register.php(32): QueryBuilder->register('Maud de Haas', 'maudhethaasje', 'maud@achthazen....', 'hey', '2019-10-11 11:4...')
+#2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(21): require('C:\\inetpub\\wwwr...')
+#3 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 51

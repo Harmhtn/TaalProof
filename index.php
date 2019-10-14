@@ -1,15 +1,24 @@
 <?php
+require 'src/bootstrap.php';
+session_start();
 
-require "src/Classes/QueryMyDatabase.php";
+if(isset($_SESSION["logged_in"]) != true) {
 
-$query = new QueryMyDatabase();
+    if ($_SERVER['REQUEST_URI'] == '/register' ||
+        $_SERVER['REQUEST_URI'] == '/login' ||
+        $_SERVER['REQUEST_URI'] == '/forgot/password'){
 
-//$query->getAllProduct();
+        require Router::load('routes.php')
+            ->direct(Request::uri());
+
+    }else{
+        $_SERVER['REQUEST_URI'] = '/login';
+
+        require Router::load('routes.php')
+            ->direct(Request::uri());
+
+    }
 
 
-require "views/head.php";
-
-require "views/default/index.view.php";
-
-//require "views/footer.php";
+}
 
