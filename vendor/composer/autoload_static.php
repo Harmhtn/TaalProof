@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3c18c937f0c8208bc356fc236be3dd0e
+class ComposerStaticInit6fd151961eaa43a30be60721de8eba38
 {
     public static $prefixLengthsPsr4 = array (
         'F' => 
@@ -20,11 +20,41 @@ class ComposerStaticInit3c18c937f0c8208bc356fc236be3dd0e
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'PEAR' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
+            ),
+        ),
+        'M' => 
+        array (
+            'Mail' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/mail',
+            ),
+        ),
+        'C' => 
+        array (
+            'Console' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/console_getopt',
+            ),
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3c18c937f0c8208bc356fc236be3dd0e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3c18c937f0c8208bc356fc236be3dd0e::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6fd151961eaa43a30be60721de8eba38::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6fd151961eaa43a30be60721de8eba38::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6fd151961eaa43a30be60721de8eba38::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit6fd151961eaa43a30be60721de8eba38::$fallbackDirsPsr0;
 
         }, null, ClassLoader::class);
     }

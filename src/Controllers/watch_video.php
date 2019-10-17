@@ -2,13 +2,7 @@
 
 $id = $_GET['id'];
 
-$video_data = $app['database']->selectVideoById('videos', $id);
-
-function add($a,$b){
-  $c=$a+$b;
-  return $c;
-}
-
+$video_data = $app['database']->selectVideosById('videos', $id);
 
 
 //load head and navbar

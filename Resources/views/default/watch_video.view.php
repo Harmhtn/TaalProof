@@ -25,5 +25,4 @@
 </div>
 <script>
 
-//hier ergens moet je iets doen :)
 </script>

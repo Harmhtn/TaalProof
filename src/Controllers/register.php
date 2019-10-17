@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     else
     {
+        $new_password = hash('sha256', $user_password);
         // functie aanroepen om gebruiker te maken
         $flevo->register($user_name, $login_name, $user_email, $user_password, $last_updated_date);
         echo "Gelukt! Het account is aangemaakt";

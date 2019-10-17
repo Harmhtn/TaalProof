@@ -5,7 +5,8 @@
   "license": "proprietary",
   "require": {
     "fpdf/fpdf": "^1.81",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "pear/mail": "^1.4"
   },
   "authors": [
     {

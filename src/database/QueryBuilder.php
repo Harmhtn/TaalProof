@@ -96,10 +96,10 @@ class QueryBuilder
         return $result;
     }
 
-    public function selectVideoById($table, $video_ids)
+    public function selectVideosById($table, $video_ids)
     {
 
-        $sql = $this->pdo->prepare("SELECT * FROM videos WHERE video_id in ($video_ids)");
+        $sql = $this->pdo->prepare("SELECT * FROM $table WHERE video_id in ($video_ids)");
         $sql->execute();
 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -107,22 +107,99 @@ class QueryBuilder
         return $results;
     }
 
-    public function selectAllIdWhereId($category_id)
+    public function selectAllIdWhereId($table, $column, $id)
     {
-        $sql = $this->pdo->prepare("SELECT * FROM multiple_categories WHERE video_category_category_id = '$category_id'");
+        $sql = $this->pdo->prepare("SELECT * FROM $table WHERE $column = '$id'");
         $sql->execute();
 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         return $results;
     }
-    public function test()
+
+    public function selectAllIdWhereIdFetch($table, $column, $id)
     {
-        echo"<pre>";
-        print_r("yo");
-        exit;
+        $sql = $this->pdo->prepare("SELECT * FROM $table WHERE $column = '$id'");
+        $sql->execute();
+
+        $results = $sql->fetch(PDO::FETCH_ASSOC);
+
+        return $results;
     }
 
+    public function selectOneIdWhereId($select, $table, $column, $id)
+    {
+        $sql = $this->pdo->prepare("SELECT $select FROM $table WHERE $column = '$id'");
+        $sql->execute();
 
+        $results = $sql->fetch(PDO::FETCH_ASSOC);
+
+        return $results;
+    }
+
+    public function selectFavorites($id)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM favorite_video WHERE users_user_id = '$id'");
+        $sql->execute();
+
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
+    }
+
+    public function insertVideo($video_name, $video_description, $video_code)
+    {
+        try {
+
+            $sql = $this->pdo->prepare("insert into videos (video_name, video_description, video_code) VALUES (:video_name, :video_description, :video_code)");
+
+            $sql->bindParam('video_name', $video_name);
+            $sql->bindParam('video_description', $video_description);
+            $sql->bindParam('video_code', $video_code);
+
+            $sql->execute();
+
+            $error = "false";
+        }catch (PDOException $e){
+            $error = "true";
+        }
+        return $error;
+    }
+    public function insertVideoCategory($video_id, $category_id)
+    {
+
+        try {
+
+            $sql = $this->pdo->prepare("insert into multiple_categories (videos_video_id, video_category_category_id) VALUES (:video_id, :category_id)");
+
+            $sql->bindParam('video_id', $video_id);
+            $sql->bindParam('category_id', $category_id);
+
+            $sql->execute();
+
+            $error = "false";
+        }catch (PDOException $e){
+            $error = "true";
+        }
+        return $error;
+    }
+
+    public function insertNewCategory($category_id)
+    {
+
+        try {
+            $sql = $this->pdo->prepare("insert into video_category (category_description) VALUES (:category_id)");
+
+            $sql->bindParam('category_id', $category_id);
+
+            $sql->execute();
+
+            $error = "false";
+        }catch (PDOException $e){
+
+            $error = "true";
+        }
+        return $error;
+    }
 
 }
