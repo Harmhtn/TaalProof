@@ -9,7 +9,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="src/Resources/public/images/favicon.jpg">
     <link rel="stylesheet" href="src/Resources/public/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
 
     <title>Taalproof</title>
@@ -25,7 +26,6 @@
 if (session_status() == PHP_SESSION_ACTIVE && session_status() != PHP_SESSION_NONE && isset($_SESSION['logged_in'])) {
     require "Resources/views/nav.php";
 }
-
 
 
 ?>

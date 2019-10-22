@@ -13,7 +13,7 @@
             <br>
             <input class="btn btn-light" type="submit">
             <div id="formFooter">
-                <a class="underlineHover text-light" href="forgot/password">Wachtwoord vergeten?</a><br>
+                <a class="underlineHover text-light" href="forgot_password">Wachtwoord vergeten?</a><br>
                 <a class="underlineHover text-light" href="register">Nog geen account?</a>
             </div>
         </form>

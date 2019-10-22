@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    $vendorDir . '/pear/archive_tar',
     $vendorDir . '/pear/console_getopt',
     $vendorDir . '/pear/mail',
-    $vendorDir . '/pear/pear-core-minimal/src',
+    $vendorDir . '/pear/net_smtp',
+    $vendorDir . '/pear/net_socket',
+    $vendorDir . '/pear/pear',
     $vendorDir . '/pear/pear_exception',
+    $vendorDir . '/pear/structures_graph',
+    $vendorDir . '/pear/xml_util',
 );

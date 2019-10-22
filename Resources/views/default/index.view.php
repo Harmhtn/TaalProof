@@ -1,4 +1,4 @@
-<div class="jumbotron text-white text-center" >
+<div class="jumbotron text-white text-center">
     <h1 class="">Welkom op Taalproof!</h1>
     <p class="lead">Hier kun je alles leren over de Nederlandse taal!</p>
     <p class="lead">

@@ -4,10 +4,15 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fpdf/fpdf" />
-      <path value="$PROJECT_DIR$/vendor/pear/pear-core-minimal" />
-      <path value="$PROJECT_DIR$/vendor/pear/pear_exception" />
-      <path value="$PROJECT_DIR$/vendor/pear/console_getopt" />
       <path value="$PROJECT_DIR$/vendor/pear/mail" />
+      <path value="$PROJECT_DIR$/vendor/pear/pear" />
+      <path value="$PROJECT_DIR$/vendor/pear/net_smtp" />
+      <path value="$PROJECT_DIR$/vendor/pear/xml_util" />
+      <path value="$PROJECT_DIR$/vendor/pear/net_socket" />
+      <path value="$PROJECT_DIR$/vendor/pear/archive_tar" />
+      <path value="$PROJECT_DIR$/vendor/pear/console_getopt" />
+      <path value="$PROJECT_DIR$/vendor/pear/pear_exception" />
+      <path value="$PROJECT_DIR$/vendor/pear/structures_graph" />
     </include_path>
   </component>
 </project>
