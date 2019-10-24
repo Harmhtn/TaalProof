@@ -4,6 +4,15 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fpdf/fpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/archive_tar" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/console_getopt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/mail" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/net_smtp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/net_socket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/pear" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/pear_exception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/structures_graph" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pear/xml_util" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

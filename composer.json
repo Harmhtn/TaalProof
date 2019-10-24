@@ -5,12 +5,21 @@
   "license": "proprietary",
   "require": {
     "fpdf/fpdf": "^1.81",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "pear/net_smtp": "^1.8",
+    "pear/mail": "^1.4",
+    "pear/pear": "^1.10"
   },
   "authors": [
     {
       "name": "author's name",
       "email": "email@example.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "pear",
+      "url": "https://pear.php.net"
     }
   ]
 }

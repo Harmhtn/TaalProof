@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row  mt-4 mb-4">
         <?php
@@ -56,6 +57,28 @@
     <div class="row">
         <p class="display-4">Favorieten video's:</p>
     </div>
-</div>
+    <div class="row justify-content-center">
+        <?php
+        if (!empty($all_videos)) {
+
+            foreach ($all_videos as $video) {
+
+                ?>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12  m-2">
+                    <div class="card  h-100" style="width: 18rem;">
+                        <img class="card-img-top"
+                             src="http://img.youtube.com/vi/<?= $video['video_code'] ?>/mqdefault.jpg" alt="">
+                        <div class="card-body">
+                            <h5 class="card-text"><?= $video['video_name'] ?></h5>
+                            <a href="/watch/video?id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        }
+        ?>
+
+    </div>
 
 

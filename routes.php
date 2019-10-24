@@ -8,7 +8,8 @@ if (!empty($router)) {
         'logout' => 'src/controllers/login.php',
         'register' => 'src/controllers/register.php',
         'account' => 'src/controllers/account.php',
-        'forgot/password' => 'src/controllers/forgot_password.php',
+        'admin' => 'src/controllers/admin.php',
+        'forgot_password' => 'src/controllers/forgot_password.php',
         'watch/video' => 'src/controllers/watch_video.php',
         'video' => 'src/controllers/video.php'
 
