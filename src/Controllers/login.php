@@ -22,7 +22,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }else {
         foreach ($userinfo as $user)
         {
+
             $_SESSION["user_id"] = $user["user_id"];
+            $_SESSION["role"] = $user["roles_role_id"];
         }
         //Provide the user with a login session.
 

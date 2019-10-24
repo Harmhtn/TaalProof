@@ -36,8 +36,7 @@ class QueryBuilder
 
     public function register($user_name, $login_name, $user_email, $user_password, $last_updated_date)
     {
-        //insert de user in de db vergeet niet alle columns!!!!!
-        //pass hash
+
         $sql = "INSERT INTO users (user_name, login_name, user_email, user_password, last_updated, roles_role_id)
                 VALUES (:user_name, :login_name, :user_email, :user_password, :last_updated, 2)";
         $sel = $this->pdo->prepare($sql);
@@ -146,9 +145,20 @@ class QueryBuilder
 
         return $results;
     }
+
     public function selectFavorites($id)
     {
         $sql = $this->pdo->prepare("SELECT * FROM favorite_video WHERE users_user_id = '$id'");
+        $sql->execute();
+
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
+    }
+
+    public function selectIfVideoFavorite($id, $video_id)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM favorite_video WHERE users_user_id = '$id' AND videos_video_id = '$video_id'");
         $sql->execute();
 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -334,7 +344,7 @@ class QueryBuilder
                 WHERE user_email = :em
                 OR login_name = :em";
 
-        $sql =$this->pdo->prepare($sql);
+        $sql = $this->pdo->prepare($sql);
 
         $sql->bindParam('tn', $token);
         $sql->bindParam('em', $email);
@@ -348,7 +358,7 @@ class QueryBuilder
                 authentication_token = NULL
                 WHERE user_id = :id";
 
-        $sql =$this->pdo->prepare($sql);
+        $sql = $this->pdo->prepare($sql);
 
         $sql->bindParam('id', $user_id);
 
@@ -359,7 +369,7 @@ class QueryBuilder
     {
         $sql = "select * from users where authentication_token = '$token'";
 
-        $sql =$this->pdo->prepare($sql);
+        $sql = $this->pdo->prepare($sql);
 
         $sql->execute();
 
@@ -374,12 +384,51 @@ class QueryBuilder
         $sql = "UPDATE users SET user_password = :pass
                 WHERE user_id = :id";
 
-        $sql =$this->pdo->prepare($sql);
+        $sql = $this->pdo->prepare($sql);
         $sql->bindParam('pass', $password);
         $sql->bindParam('id', $id);
 
         $sql->execute();
 
     }
+
+    public function deleteFromFavorites($user_id, $video_id)
+    {
+
+
+        $sql = $this->pdo->prepare("DELETE FROM `favorite_video` 
+            WHERE `videos_video_id` = :video_id And users_user_id = :users_user_id");
+
+        $sql->bindParam('video_id', $video_id);
+        $sql->bindParam('users_user_id', $user_id);
+
+        try {
+            $sql->execute();
+
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function addToFavorites($user_id, $video_id)
+    {
+
+
+        $sql = "INSERT INTO favorite_video (users_user_id, videos_video_id)
+                VALUES (:users_user_id, :videos_video_id)";
+
+        $sel = $this->pdo->prepare($sql);
+        $sel->bindValue("users_user_id", $user_id);
+        $sel->bindValue("videos_video_id", $video_id);
+
+        try {
+            $sel->execute();
+
+        } catch (PDOException $e) {
+
+            die($e->getMessage());
+        }
+    }
+
 
 }

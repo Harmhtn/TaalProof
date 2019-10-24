@@ -9,7 +9,8 @@ if(isset($_SESSION["logged_in"]) != true) {
     if ($_SERVER['REQUEST_URI'] == '/register' ||
         $_SERVER['REQUEST_URI'] == '/login' ||
         $_SERVER['REQUEST_URI'] == '/forgot_password' ||
-        $request_uri == '/forgot_password'){
+        $request_uri == '/forgot_password')
+    {
 
         require Router::load('routes.php')
             ->direct(Request::uri());
@@ -22,8 +23,15 @@ if(isset($_SESSION["logged_in"]) != true) {
 
     }
 
+}elseif ($_SESSION['role'] != 1){
+    if ($_SERVER['REQUEST_URI'] == '/admin'){
+        $_SERVER['REQUEST_URI'] = '/account';
+    }
 
-}else{
+    require Router::load('routes.php')
+        ->direct(Request::uri());
+}
+else{
     require Router::load('routes.php')
         ->direct(Request::uri());
 }

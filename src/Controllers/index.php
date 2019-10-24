@@ -1,4 +1,5 @@
 <?php
+
 //load head and navbar
 require 'Resources/views/head.php';
 

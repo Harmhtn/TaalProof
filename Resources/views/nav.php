@@ -18,6 +18,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="/account">Account</a>
             </li>
+            <?php
+            if ($_SESSION['role'] == 1){
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin</a>
+                </li>
+            <?php
+            }
+            ?>
+
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
             </li>
