@@ -44,51 +44,13 @@
                 {
                     $(star).toggleClass("fas");
                     $(star).toggleClass("far");
-                    // console.log($(star).toggleClass("far"));
-
-                    // $(star).removeClass('far').addClass('fas');
                 }
             });
     });
 
-    // $('.fas').click(function() {
-    //
-    //     $.ajax(
-    //         {
-    //             type: 'POST',
-    //             url: '/watch/video?id='+id,
-    //             data:
-    //
-    //                 {
-    //                     delete: "delete",
-    //                     id: id
-    //
-    //                 },
-    //             success: function(data)
-    //             {
-    //                 $(star).toggleClass("far");
-    //                 $(star).toggleClass("fas");
-    //                 // console.log($(star).toggleClass("fas"));
-    //                 //
-    //                 // // $(star).removeClass('fas').addClass('far');
-    //                 // $(star).toggleClass("far");
-    //
-    //             }
-    //         });
-    // });
+
 
 </script>
 <script>
 
-    // function onClick() {
-    //     var arr = document.getElementById("star").className;
-    //
-    //     if (arr.includes('fas')) {
-    //         document.getElementById("star").classList.add('far');
-    //         document.getElementById("star").classList.remove('fas');
-    //     } else {
-    //         document.getElementById("star").classList.add('fas');
-    //         document.getElementById("star").classList.remove('far');
-    //     }
-    // }
 </script>

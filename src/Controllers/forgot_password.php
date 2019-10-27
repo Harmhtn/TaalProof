@@ -20,14 +20,15 @@ if (isset($_POST['email_send'])) {
 
         require_once "vendor/pear/mail/Mail.php";
 
-        $host = "";
-        $username = "";
-        $password = "";
-        $port = '';
+        //login credentials
+        $host = $app['config']['email']['host'];
+        $username = $app['config']['email']['username'];
+        $password = $app['config']['email']['password'];
+        $port = $app['config']['email']['port'];
 
-        $from = 'example@example.nl';
+        $from = 'Taalproof';
         $to = $user_info['user_email'];
-        $subject = "yes yes";
+        $subject = "Wachtwoord veranderen";
 
         $body = "je hebt recent aangevraagt om uw wachtwoord te veranderen. 
                 Klik op de volgende link om uw wachtwoord opnieuw in te stellen 
@@ -51,19 +52,18 @@ if (isset($_POST['email_send'])) {
             $mail = $smtp->send($to, $headers, $body);
 
         } catch (PEAR_Exception $e) {
-            echo "<pre>";
-            print_r($e->getMessage());
-            exit;
+            echo "<div class='alert alert-danger'>Er is iets mis gegaan!</div>";
         }
-    echo "Er is een mail verstuurd naar het email adress controlleer ook uw spam box";
+    echo "<div class='alert alert-success'>Er is een mail verstuurd naar het email adress controlleer ook uw spam box</div>";
 
     } else {
-        echo "Dit email adress staat niet geregistreerd";
+        echo "<div class='alert alert-danger'>Dit email adress staat niet geregistreerd</div>";
     }
 
 
 }
 elseif (isset($_GET['token'])) {
+    //check if token expired
     $result = $app['database']->checkToken($_GET['token']);
     if ($result != ''){
 
@@ -74,7 +74,6 @@ elseif (isset($_GET['token'])) {
         $new_date = $authentication_date->modify('+10 minutes');
 
         if ($date <= $new_date->format('Y-m-d H:i:s') ) {
-
             require 'Resources/views/default/enter_new_pass.view.php';
             $app['database']->resetToken($_GET['token'], $result['user_id']);
 
@@ -85,7 +84,7 @@ elseif (isset($_GET['token'])) {
         require 'Resources/views/default/forgot_password.view.php';
     }
 
-}
+}// hash the new password and update it
 elseif (isset($_GET['newpass'])) {
     $new_password = hash('sha256', $_POST['new_password']);
     $app['database']->updatePassword($new_password, $_GET['newpass']);

@@ -1520,3 +1520,54 @@ Stack trace:
 #2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(32): require('C:\\inetpub\\wwwr...')
 #3 {main}
   thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 102
+[24-Oct-2019 08:01:36 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php on line 26
+[24-Oct-2019 08:01:36 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\nav.php on line 22
+[24-Oct-2019 08:01:40 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php on line 26
+[24-Oct-2019 08:05:58 UTC] PHP Notice:  Undefined variable: vid_id in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:05:58 UTC] PHP Warning:  implode(): Invalid arguments passed in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:05:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php:102
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php(102): PDOStatement->execute()
+#1 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php(17): QueryBuilder->selectVideosById('videos', NULL)
+#2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(32): require('C:\\inetpub\\wwwr...')
+#3 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 102
+[24-Oct-2019 08:06:09 UTC] PHP Notice:  Undefined variable: vid_id in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:06:09 UTC] PHP Warning:  implode(): Invalid arguments passed in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:06:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php:102
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php(102): PDOStatement->execute()
+#1 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php(17): QueryBuilder->selectVideosById('videos', NULL)
+#2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(32): require('C:\\inetpub\\wwwr...')
+#3 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 102
+[24-Oct-2019 08:07:43 UTC] PHP Notice:  Undefined variable: vid_id in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:07:43 UTC] PHP Warning:  implode(): Invalid arguments passed in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php on line 15
+[24-Oct-2019 08:07:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1 in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php:102
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php(102): PDOStatement->execute()
+#1 C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\account.php(17): QueryBuilder->selectVideosById('videos', NULL)
+#2 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(32): require('C:\\inetpub\\wwwr...')
+#3 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 102
+[25-Oct-2019 09:49:23 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php on line 26
+[25-Oct-2019 09:49:23 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\nav.php on line 22
+[25-Oct-2019 09:49:25 UTC] PHP Notice:  Undefined index: role in C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php on line 26
+[25-Oct-2019 11:30:04 UTC] PHP Notice:  Undefined variable: message in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\database\QueryBuilder.php on line 37
+[25-Oct-2019 11:43:09 UTC] PHP Notice:  Undefined variable: message in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\register.php on line 38
+[25-Oct-2019 11:44:13 UTC] PHP Notice:  Undefined variable: message in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\register.php on line 38
+[25-Oct-2019 11:59:49 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\admin.php on line 35
+[25-Oct-2019 12:00:03 UTC] PHP Notice:  Undefined variable: category_description_edit in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:00:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:00:03 UTC] PHP Notice:  Undefined variable: category_description_edit in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:00:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:00:03 UTC] PHP Notice:  Undefined variable: category_description_edit in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:00:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\PHP\taalproof_2.0\Resources\views\default\add_video.view.php on line 62
+[25-Oct-2019 12:05:19 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\login.php:21
+Stack trace:
+#0 C:\inetpub\wwwroot\PHP\taalproof_2.0\index.php(16): require()
+#1 {main}
+  thrown in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\login.php on line 21
+[25-Oct-2019 12:08:46 UTC] PHP Notice:  Trying to get property 'message' of non-object in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\login.php on line 19
+[25-Oct-2019 12:19:19 UTC] PHP Notice:  Undefined property: QueryBuilder::$message in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\admin.php on line 35
+[25-Oct-2019 12:44:08 UTC] PHP Notice:  Undefined index: email in C:\inetpub\wwwroot\PHP\taalproof_2.0\src\Controllers\forgot_password.php on line 24

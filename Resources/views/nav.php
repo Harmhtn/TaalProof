@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm  bg-white">
     <a class="navbar-brand" href="/">
-        <img class="img-responsive" src="src/Resources/public/images/logotaalproof.fw.png" alt="">
+        <img class="img-responsive" src="\src\Resources\public\images\logotaalproof.fw.png" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

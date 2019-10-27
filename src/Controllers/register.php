@@ -18,27 +18,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $last_updated_date = $last_updated->format('Y-m-d H:i:s');
 
 
-
+    $new_password = hash('sha256', $user_password);
 //inloggen om te checken of de gebruiker al bestaat
-    if ($flevo->login($login_name, $user_password))
+    if ($flevo->login($login_name, $new_password))
     {
-        echo "Er bestaat al een account met deze email";
-        echo '<a href="login">, keer terug naar loginscherm</a>';
+        $message = true;
 
-    }
-    else
-    {
-        $new_password = hash('sha256', $user_password);
+    } else {
         // functie aanroepen om gebruiker te maken
-        $flevo->register($user_name, $login_name, $user_email, $user_password, $last_updated_date);
-        echo "Gelukt! Het account is aangemaakt";
-        echo '<a href="login">, keer terug naar loginscherm</a>';
+        $message = $flevo->register($user_name, $login_name, $user_email, $new_password, $last_updated_date);
+        if (!$message){
+            $flevo->login($login_name, $new_password);
+            header("Location: /");
+        }
     }
 
-}else
-{
-    require 'Resources/views/default/register.view.php';
 }
+
+
+require 'Resources/views/default/register.view.php';
+
 
 //load footer
 require 'Resources/views/footer.php';

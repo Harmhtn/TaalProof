@@ -1,20 +1,22 @@
-
 <div class="container">
+    <?php
+    if (!empty($message) && $message == true) {
+        ?>
+        <div class="alert alert-danger"> Dit account bestaat al</div>
+        <?php
+    }
+    ?>
     <div class="row  mt-4 mb-4">
         <?php
-        if (isset($_SESSION['updated']) == true) {
-            echo '<div class="alert alert-danger">Deze mail of gebruikers naam is al bezet</div>';
-        }
+
         if (!empty($user_info)) {
             foreach ($user_info as $user) {
-
-
                 if (isset($_GET['edit'])) {
                     ?>
                     <div class="card" style="width: 18rem;">
 
-                        <div style="background-color: #00adee" class="hoeverclass card-header text-white"><a
-                                    href="account?edit" class="edit"><i class="far fa-edit float-right"></i></a>
+                        <div style="background-color: #00adee" class="hoeverclass card-header text-white">
+                            <a href="account?edit" class="edit"><i class="far fa-edit float-right"></i></a>>
                             Hallo <?= $user['user_name'] ?><br>
                             Persoonlijke gegevens
                         </div>
