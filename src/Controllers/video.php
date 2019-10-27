@@ -8,6 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' &&  $_POST['select_category'] != 'all')
     $cat_id = strtok($category_id_name, '.');
     $cat_name = substr($category_id_name, strpos($category_id_name, ".") + 1);
 
+    //select all videos where the category_id is id
     $all_videos_id = $app['database']->selectAllIdWhereId('multiple_categories', 'video_category_category_id', $cat_id);
 
     if(!empty($all_videos_id)){

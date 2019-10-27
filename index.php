@@ -23,7 +23,7 @@ if(isset($_SESSION["logged_in"]) != true) {
 
     }
 
-}elseif ($_SESSION['role'] != 1){
+}elseif (isset($_SESSION['role']) && $_SESSION['role'] != 1){
     if ($_SERVER['REQUEST_URI'] == '/admin'){
         $_SERVER['REQUEST_URI'] = '/account';
     }

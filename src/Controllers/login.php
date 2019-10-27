@@ -1,6 +1,7 @@
 <?php
 $app['database'];
 
+//if logout is clicked destroy the session
 if($_SERVER['REQUEST_URI'] == '/logout'){
     session_destroy();
 }
@@ -13,14 +14,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $login_name = $_POST['login_name'];
     $pass = $_POST['password'];
 
-    $userinfo = $app['database']->login($login_name, $pass);
+    $new_password = hash('sha256', $pass);
+    $userinfo = $app['database']->login($login_name, $new_password);
 
-
-    if (!$userinfo)
+    if (!$userinfo[0])
     {
-        echo "Geen account bekend met deze gegevens!";
+        $message = true;
     }else {
-        foreach ($userinfo as $user)
+        foreach ($userinfo[0] as $user)
         {
 
             $_SESSION["user_id"] = $user["user_id"];
@@ -32,10 +33,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         header('Location: /');
     }
 
-}else{
+}
 //load view
     require 'Resources/views/default/login.view.php';
-}
+
 
 
 

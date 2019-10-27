@@ -25,12 +25,17 @@ class QueryBuilder
     public function login($login_name, $password)
     {
 
-        $sql = $this->pdo->prepare("SELECT * FROM users WHERE login_name = '$login_name' or user_email = '$login_name' AND user_password = '$password'");
-        $sql->execute();
+        $sql = $this->pdo->prepare("SELECT * FROM users WHERE login_name ='$login_name' or user_email ='$login_name' AND user_password = '$password'");
+        try {
+            $sql->execute();
 
-        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $message = false;
+        } catch (PDOException $e) {
+            $message = true;
+        }
 
-        return $results;
+        return $output[] = [$results, $message];
 
     }
 
@@ -46,9 +51,14 @@ class QueryBuilder
         $sel->bindValue("user_password", $user_password);
         $sel->bindValue("last_updated", $last_updated_date);
 
+        try {
+            $sel->execute();
+            $message = false;
+        } catch (Exception $e) {
+            $message = true;
+        }
 
-        $sel->execute();
-
+        return $message;
     }
 
     public function selectUserById($id)
@@ -64,21 +74,24 @@ class QueryBuilder
 
     public function updateUser($user_name, $login_name, $email, $id)
     {
+
+        $sql = $this->pdo->prepare("UPDATE users SET user_name = :user_name, login_name = :login_name, user_email = :email  WHERE user_id = :id");
+
+        $sql->bindParam('user_name', $user_name);
+        $sql->bindParam('login_name', $login_name);
+        $sql->bindParam('email', $email);
+        $sql->bindParam('id', $id);
+
         try {
-
-            $sql = $this->pdo->prepare("UPDATE users SET user_name = :user_name, login_name = :login_name, user_email = :email  WHERE user_id = :id");
-
-            $sql->bindParam('user_name', $user_name);
-            $sql->bindParam('login_name', $login_name);
-            $sql->bindParam('email', $email);
-            $sql->bindParam('id', $id);
-
             $sql->execute();
+            $message = false;
+        } catch (Exception $e) {
+            $message = true;
 
-            $_SESSION['updated'] = true;
-        } catch (PDOException $e) {
-            $_SESSION['updated'] = false;
         }
+
+        return $message;
+
     }
 
     public function getCities()
@@ -312,7 +325,7 @@ class QueryBuilder
             $sql->execute();
 
         } catch (Exception $e) {
-            die($e->getMessage());
+            $message = true;
         }
     }
 

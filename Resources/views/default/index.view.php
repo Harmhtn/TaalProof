@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row bg-light p-4">
         <div class="col-4">
-            <img src="src/Resources/public/images/logo-taalproof.fw.png" alt="">
+            <img src="\src\Resources\public\images\logo-taalproof.fw.png" alt="">
         </div>
         <div class="col-8 mt-4">
             <p class="font-weight-bold">

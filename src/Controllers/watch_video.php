@@ -4,6 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $id = $_POST['id'];
 
+    //add or delete from favorites
     if ($_POST['posttype'] == 'delete') {
         echo $_POST['posttype'];
         $app['database']->deleteFromFavorites($_SESSION['user_id'], $id);
@@ -13,26 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 }
     $id = $_GET['id'];
-
+    //check if video is already a favorite or not
     $video_data = $app['database']->selectVideosById('videos', $id);
     $id = $_SESSION['user_id'];
     $favorites = $app['database']->selectIfVideoFavorite($id, $video_data[0]['video_id']);
 
-
-    if ($favorites == ""){
-        $class = 'fas';
-    }else{
+//make video show as favorite or not
+    if (empty($favorites)){
         $class = 'far';
+    }else{
+        $class = 'fas';
     }
-
-
-
-
-//get if video is already favorite or not
-
-//when send back
-//make video favorite
-//delete video from favorites
 
 
 //load head and navbar

@@ -1,6 +1,13 @@
 <div class="container">
     <div class="row justify-content-center text-white">
         <div class="col-4 mt-4 p-4 rounded" style="background-color: #00adee">
+            <?php
+            if (!empty($message) && $message == true) {
+                ?>
+                    <div class="alert alert-danger">Dit account bestaat al</div>
+                <?php
+            }
+            ?>
             <form action="/register" class="form-signin w-100" method="post">
                 <!--    user name-->
                 <div class="form-group">
@@ -20,7 +27,8 @@
                 <!--    user password-->
                 <div class="form-group">
                     <label for="InputPassword">Wachtwoord</label><br>
-                    <input type="password" class="form-control" name="user_password" id="InputPassword" placeholder="Wachtwoord">
+                    <input type="password" class="form-control" name="user_password" id="InputPassword"
+                           placeholder="Wachtwoord">
                 </div>
                 <button type="submit" class="btn btn-primary">Registreer</button>
 
