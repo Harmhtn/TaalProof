@@ -6,8 +6,6 @@ if($_SERVER['REQUEST_URI'] == '/logout'){
     session_destroy();
 }
 
-//load head and navbar
-require 'Resources/views/head.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -17,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $new_password = hash('sha256', $pass);
     $userinfo = $app['database']->login($login_name, $new_password);
 
-    if (!$userinfo[0])
+    if (empty($userinfo[0]))
     {
         $message = true;
     }else {
@@ -30,13 +28,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         //Provide the user with a login session.
 
         $_SESSION["logged_in"] = true;
-        header('Location: /');
+
+        //load head and navbar
+        require 'Resources/views/head.php';
+        require 'Resources/views/default/index.view.php';
     }
 
-}
-//load view
-    require 'Resources/views/default/login.view.php';
+}else{
+    //load head and navbar
+    require 'Resources/views/head.php';
 
+    //load view
+    require 'Resources/views/default/login.view.php';
+}
 
 
 

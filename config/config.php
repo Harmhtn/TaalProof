@@ -11,10 +11,10 @@ return [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]],
 
-        'email' => [
-            'host' => 'smtp.gmail.com',
-            'username' => 'team3wind@gmail.com',
-            'password' => 'flevosap',
-            'port' => '465',
-        ]
-    ];
+    'email' => [
+        'host' => 'smtp.gmail.com',
+        'username' => 'team3wind@gmail.com',
+        'password' => 'flevosap',
+        'port' => '587'
+    ]
+];

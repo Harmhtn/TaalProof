@@ -358,15 +358,17 @@ class QueryBuilder
                 OR login_name = :em";
 
         $sql = $this->pdo->prepare($sql);
-
+;
         $sql->bindParam('tn', $token);
         $sql->bindParam('em', $email);
 
         $sql->execute();
+
     }
 
-    public function resetToken($token, $user_id)
+    public function resetToken( $user_id)
     {
+
         $sql = "UPDATE users SET authentication_date = NULL,
                 authentication_token = NULL
                 WHERE user_id = :id";
@@ -374,6 +376,7 @@ class QueryBuilder
         $sql = $this->pdo->prepare($sql);
 
         $sql->bindParam('id', $user_id);
+
 
         $sql->execute();
     }
