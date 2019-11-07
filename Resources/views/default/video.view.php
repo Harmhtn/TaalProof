@@ -1,5 +1,5 @@
 <div class="container bg-light">
-    <form action="/video" method="post">
+    <form action="?url=video" method="post">
         <select class="form-control mt-4" name="select_category">
             <option selected="selected">Kies een categorie</option>
             <option value="all">Alle</option>
@@ -33,7 +33,7 @@
                              src="http://img.youtube.com/vi/<?= $video['video_code'] ?>/mqdefault.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-text"><?= $video['video_name'] ?></h5>
-                            <a href="/watch/video?id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
+                            <a href="?url=watch/video?id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
                         </div>
                     </div>
                 </div>

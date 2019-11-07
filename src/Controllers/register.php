@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $message = $flevo->register($user_name, $login_name, $user_email, $new_password, $last_updated_date);
         if (!$message){
             $flevo->login($login_name, $new_password);
-            header("Location: /");
+            header("Location: ?url=home");
         }
     }
 

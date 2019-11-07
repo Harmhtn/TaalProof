@@ -2,7 +2,7 @@
 $app['database'];
 
 //if logout is clicked destroy the session
-if($_SERVER['REQUEST_URI'] == '/logout'){
+if($_GET['url'] == 'logout'){
     session_destroy();
 }
 

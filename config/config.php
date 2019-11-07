@@ -3,10 +3,10 @@
 
 return [
     'database' => [
-        'server_name' => 'remotemysql.com',
+        'server_name' => 'localhost',
         'username' => 'ti6l6GEhzS',
-        'password' => '2qFRB9dcoy',
-        'db_name' => 'ti6l6GEhzS',
+        'password' => 'ADSDMaud2000!',
+        'db_name' => 'maud_taalproof',
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]],

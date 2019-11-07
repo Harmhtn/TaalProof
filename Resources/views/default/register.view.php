@@ -8,7 +8,7 @@
                 <?php
             }
             ?>
-            <form action="/register" class="form-signin w-100" method="post">
+            <form action="?url=register" class="form-signin w-100" method="post">
                 <!--    user name-->
                 <div class="form-group">
                     <label for="Input">Naam</label><br>

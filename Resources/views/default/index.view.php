@@ -2,7 +2,7 @@
     <h1 class="">Welkom op Taalproof!</h1>
     <p class="lead">Hier kun je alles leren over de Nederlandse taal!</p>
     <p class="lead">
-        <a class="btn btn-success btn-lg" href="/video" role="button">Kijk Video's</a>
+        <a class="btn btn-success btn-lg" href="?url=video" role="button">Kijk Video's</a>
     </p>
 </div>
 <div class="container">

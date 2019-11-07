@@ -33,7 +33,7 @@
         $.ajax(
             {
                 type: 'POST',
-                url: '/watch/video?id='+id,
+                url: '?url=watch/video?id='+id,
                 data:
                     {
 

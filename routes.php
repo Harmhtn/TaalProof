@@ -3,7 +3,7 @@
 if (!empty($router)) {
     $router->define( [
 
-        '/' => 'src/Controllers/index.php',
+        'home' => 'src/Controllers/index.php',
         'login' => 'src/Controllers/login.php',
         'logout' => 'src/Controllers/login.php',
         'register' => 'src/Controllers/register.php',

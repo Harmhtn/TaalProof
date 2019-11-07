@@ -24,8 +24,8 @@
             ?>
         <tr>
             <td><?= $category['category_description'] ?></td>
-            <td><a href="admin?deleteC=<?= $category['category_id'] ?>" class="fas fa-trash-alt"></a></td>
-            <td><a href="admin?editC=<?= $category['category_id'] ?>" class="fas fa-edit"></a></td>
+            <td><a href="?url=admin&deleteC=<?= $category['category_id'] ?>" class="fas fa-trash-alt"></a></td>
+            <td><a href="?url=admin&editC=<?= $category['category_id'] ?>" class="fas fa-edit"></a></td>
         </tr>
 
         <?php
@@ -50,7 +50,7 @@
         <tbody>
         <tr>
             <td colspan="4">
-                <a href="/admin?add"><i class="fas fa-plus"></i> Video toevoegen</a>
+                <a href="?url=admin&add"><i class="fas fa-plus"></i> Video toevoegen</a>
             </td>
         </tr>
         <?php
@@ -67,8 +67,8 @@
                     <td><?php foreach ($video[0] as $vid) {
                             echo '-' . $vid . '<br>';
                         } ?></td>
-                    <td><a href="admin?delete=<?= $video['video_id'] ?>" class="fas fa-trash-alt"></a></td>
-                    <td><a href="admin?edit=<?= $video['video_id'] ?>" class="fas fa-edit"></a></td>
+                    <td><a href="?url=admin&delete=<?= $video['video_id'] ?>" class="fas fa-trash-alt"></a></td>
+                    <td><a href="?url=admin&edit=<?= $video['video_id'] ?>" class="fas fa-edit"></a></td>
 
                 </tr>
 

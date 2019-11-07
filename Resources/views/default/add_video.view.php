@@ -23,7 +23,7 @@
     });
 </script>
 <div class="container">
-    <form action="/admin" class="form-signin w-100" method="post">
+    <form action="?url=admin" class="form-signin w-100" method="post">
         <input type="hidden" name="video_id"
                value="<?= isset($edit_video['video_id']) ? $edit_video['video_id'] : ''; ?>">
 

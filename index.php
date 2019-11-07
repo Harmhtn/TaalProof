@@ -1,32 +1,29 @@
 <?php
-require 'src/bootstrap.php';
 
+require 'src/bootstrap.php';
 session_start();
 
-if(isset($_SESSION["logged_in"]) != true) {
-    $str = $_SERVER['REQUEST_URI'];
-    $request_uri =  substr($str, 0,strrpos($str, '?'));
+if (isset($_SESSION['logged_in']) != true) {
 
-    if ($_SERVER['REQUEST_URI'] == '/register' ||
-        $_SERVER['REQUEST_URI'] == '/login' ||
-        $_SERVER['REQUEST_URI'] == '/forgot_password' ||
-        $request_uri == '/forgot_password')
-    {
+    $str = $_GET['url'];
+    $request_uri = substr($str, 0, strrpos($str, '?'));
 
-        require Router::load('routes.php')
-            ->direct(Request::uri());
-
-    }else{
-        $_SERVER['REQUEST_URI'] = '/login';
+    if ($_GET['url'] == 'register' ||
+        $_GET['url'] == 'login' ||
+        $_GET['url'] == 'forgot_password') {
 
         require Router::load('routes.php')
             ->direct(Request::uri());
+    } else {
+        $_GET['url'] = 'login';
 
+        require Router::load('routes.php')
+            ->direct(Request::uri());
     }
 
 }elseif (isset($_SESSION['role']) && $_SESSION['role'] != 1){
-    if ($_SERVER['REQUEST_URI'] == '/admin'){
-        $_SERVER['REQUEST_URI'] = '/account';
+    if ($_GET['url'] == 'admin'){
+        $_GET['url'] = 'account';
     }
 
     require Router::load('routes.php')

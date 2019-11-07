@@ -16,11 +16,11 @@
                     <div class="card" style="width: 18rem;">
 
                         <div style="background-color: #00adee" class="hoeverclass card-header text-white">
-                            <a href="account?edit" class="edit"><i class="far fa-edit float-right"></i></a>>
+                            <a href="?url=account&account&edit" class="edit"><i class="far fa-edit float-right"></i></a>>
                             Hallo <?= $user['user_name'] ?><br>
                             Persoonlijke gegevens
                         </div>
-                        <form action="account?change" method="post">
+                        <form action="?url=account&change" method="post">
                             <ul class="list-group list-group-flush">
                                 Naam:
                                 <input class=" list-group-item" name="user_name" value="<?= $user['user_name'] ?>">
@@ -38,7 +38,7 @@
                     <div class="card" style="width: 18rem;">
 
                         <div style="background-color: #00adee" class="hoeverclass card-header text-white"><a
-                                    href="account?edit" class="edit"><i class="far fa-edit float-right"></i></a>
+                                    href="?url=account&edit" class="edit"><i class="far fa-edit float-right"></i></a>
                             Hallo <?= $user['user_name'] ?><br>
                             Persoonlijke gegevens
                         </div>
@@ -72,7 +72,7 @@
                              src="http://img.youtube.com/vi/<?= $video['video_code'] ?>/mqdefault.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-text"><?= $video['video_name'] ?></h5>
-                            <a href="/watch/video?id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
+                            <a href="?url=/watch/video&id=<?= $video['video_id'] ?>" class="btn btn-primary">Kijk video!</a>
                         </div>
                     </div>
                 </div>
